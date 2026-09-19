@@ -32,7 +32,14 @@ The dataset used for this project contains real-world data science job informati
 
 ## 1. Does having more skills result in better pay?
 ### Skill: Power Query (ETL)
-**Data Extraction**
-I used Power Query to extract the original data [data_jobs_salary_all.xlsx](https://github.com/user-attachments/files/32415026/data_jobs_salary_all.xlsx) and create two queries:
+**Data Extraction**  
+I used Power Query to extract the original data ([data_jobs_salary_all.xlsx](https://github.com/user-attachments/files/32415026/data_jobs_salary_all.xlsx)) and create two queries:
 - First one with all the data jobs information
 - The second listing the skills for each job ID
+
+**Data Transformation**  
+I then transformed each query by changing column types, removing unnecessary column, cleaning text to eliminate specific words and trimming excess whitespace.  
+- data_jobs_all  
+<img width="244" height="312" alt="2_Project_Analysis_Screenshot1" src="https://github.com/user-attachments/assets/050ee8fb-3f9f-4558-b893-1d794313bf4e" />
+
+
