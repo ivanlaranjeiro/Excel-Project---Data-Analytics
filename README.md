@@ -23,3 +23,16 @@ I used, and learned, the following Excel skills for analysis:
 - Power Pivot
 
 ## Data Jobs Dataset
+The dataset used for this project contains real-world data science job information from January 2023 until September 2026. [The dataset is available here](https://drive.google.com/drive/folders/10s_Wl4WMrq1zvYcWqLs0QMAN0LQjvcZh). It provides a foundation for analyzing data using Excel. It includes detailed information on:
+
+- Job Titles
+- Salaries
+- Locations
+- Skills
+
+## 1. Does having more skills result in better pay?
+### Skill: Power Query (ETL)
+**Data Extraction**
+I used Power Query to extract the original data [data_jobs_salary_all.xlsx](https://github.com/user-attachments/files/32415026/data_jobs_salary_all.xlsx) and create two queries:
+- First one with all the data jobs information
+- The second listing the skills for each job ID
