@@ -40,6 +40,40 @@ I used Power Query to extract the original data ([data_jobs_salary_all.xlsx](htt
 **Data Transformation**  
 I then transformed each query by changing column types, removing unnecessary column, cleaning text to eliminate specific words and trimming excess whitespace.  
 - data_jobs_all  
-<img width="244" height="312" alt="2_Project_Analysis_Screenshot1" src="https://github.com/user-attachments/assets/050ee8fb-3f9f-4558-b893-1d794313bf4e" />
+<img width="244" height="312" alt="2_Project_Analysis_Screenshot1" src="https://github.com/user-attachments/assets/050ee8fb-3f9f-4558-b893-1d794313bf4e" />  
+
+- data_jobs_skills
+<img width="243" height="328" alt="2_Project_Analysis_Screenshot2" src="https://github.com/user-attachments/assets/41990668-986a-4503-8942-68a43830c3a2" />  
+
+I then loaded both transformed queries into the workbook, setting the foundation for my subsequent analysis.  
+- data_jobs_all
+<img width="1916" height="649" alt="2_Project_Analysis_Screenshot3" src="https://github.com/user-attachments/assets/e7cfd167-dbb7-4849-a996-14cca0967d3d" />
+
+- data_jobs_skills
+<img width="1914" height="702" alt="2_Project_Analysis_Screenshot4" src="https://github.com/user-attachments/assets/b1f1cca9-9566-465f-bec2-dcec065615f6" />  
+
+
+### Analysis 
+- Senior Data Engineer and Data Scientist roles show the clearest positive link between the number of skills requested and median salary, a trend that also appears across other roles.
+- Roles that requires fewer skills, like Business Analyst and Data Analst, tend to offer lower salaries. More specialized skill sets seem to command higher market values.  
+<img width="874" height="537" alt="2_Project_Analysis_Chart1" src="https://github.com/user-attachments/assets/3a7a395a-c710-4075-b355-f2650fcef015" />
+
+## 2. What's the salary for Data jobs in different regions?
+### Skills: Pivot Tables & DAX  
+**Pivot Table** 
+- I used Power Pivot to create a Data Model that allowed me to build a PivotTable.
+- Moved the job_title_short to the rows area and the salary_year_avg into de values area.
+- Then I added a new measure to calculate the median salary for United States jobs.
+
+`=Calculate(
+  MEDIAN(data_jobs_all[salary_year_avg]),
+  data_jobs_all[job_country] = "United States")`  
+
+**DAX**
+- To calculate the median year salary I used DAX.  
+`Median Salary := MEDIAN(data_jobs_all[salary_year_avg])`  
+### Analysis 
+
+
 
 
