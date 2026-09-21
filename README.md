@@ -56,7 +56,8 @@ I then loaded both transformed queries into the workbook, setting the foundation
 ### Analysis 
 - Senior Data Engineer and Data Scientist roles show the clearest positive link between the number of skills requested and median salary, a trend that also appears across other roles.
 - Roles that requires fewer skills, like Business Analyst and Data Analst, tend to offer lower salaries. More specialized skill sets seem to command higher market values.  
-<img width="874" height="537" alt="2_Project_Analysis_Chart1" src="https://github.com/user-attachments/assets/3a7a395a-c710-4075-b355-f2650fcef015" />
+<img width="2306" height="1357" alt="2_Project_Analysis_Chart1" src="https://github.com/user-attachments/assets/71d117a2-a354-4992-accd-bc23dd82ec2c" />
+
 
 ## 2. What's the salary for Data jobs in different regions?
 ### Skills: Pivot Tables & DAX  
@@ -64,6 +65,7 @@ I then loaded both transformed queries into the workbook, setting the foundation
 - I used Power Pivot to create a Data Model that allowed me to build a PivotTable.
 - Moved the job_title_short to the rows area and the salary_year_avg into de values area.
 - Then I added a new measure to calculate the median salary for United States jobs.
+- In the end I inserted a slicer so I could compare different countries with United States jobs and non-United States jobs.
 
 `=Calculate(
   MEDIAN(data_jobs_all[salary_year_avg]),
@@ -73,7 +75,50 @@ I then loaded both transformed queries into the workbook, setting the foundation
 - To calculate the median year salary I used DAX.  
 `Median Salary := MEDIAN(data_jobs_all[salary_year_avg])`  
 ### Analysis 
+- Senior technical roles, especially Senior Data Engineer and Senior Data Scientist, consistently earn the highest median salaries across both U.S. and non‑U.S. regions.
+- This insight helps professionals prioritize skill development and career paths toward roles that offer the strongest global earning potential.
+<img width="777" height="272" alt="2_Project_Analysis_Chart2" src="https://github.com/user-attachments/assets/2f67e37d-76a0-4bd4-a03a-d7c3cc13070e" />
+
+## 3. What are the top skills of data professionals?
+### Skill: Power Pivot  
+**Power Pivot**
+- I created a data model by integrating the data_jobs_all and data_jobs_skills tables into one model.
+- Since I add already cleaned the data using Power Query, Power Pivot was used to create a relationship between these two tables.
+
+**Data Model**
+- Created a relationship between my two tables using the job_id column.
+<img width="1788" height="1264" alt="2_Project_Analysis_Screenshot5" src="https://github.com/user-attachments/assets/c7c61a51-c4da-4c46-af35-7fc89c567671" />
+
+**Power Pivot Menu**
+- The Power Pivot menu allowed me to refine my data model and to create new measures in a easy way.
+<img width="1918" height="742" alt="2_Project_Analysis_Screenshot6" src="https://github.com/user-attachments/assets/ee9a27a3-0c9f-479b-a7c9-a23197a2f5b7" />
 
 
+### Analysis
+- In the case of the United States, SQL and Python dominate as top skills in data-related jobs, reflecting a foundational role in data processing and analysis.
+- AWS and Azure skills show that companies highly value data professionals who can work in modern cloud environments and handle real‑world, scalable ML systems.
+
+<img width="947" height="307" alt="2_Project_Analysis_Chart3" src="https://github.com/user-attachments/assets/0eb30721-a9f8-4789-88e3-07a77ffa0a5e" />
+
+## 4 . What's the pay of the top 10 skills?
+### Skill: Advanced Charts (Pivot Chart)
+**Pivot Chart**    
+- Created a combo PivotChart to plot median salary and skill likelihood (%) from my PivotTable.
+    - Primary Axis: Median Salary (as a Clustered Column)
+    - Secondary Axis: Skill Likelihood (as a line with Markers)
+
+- To customize the chart, I added a title axis title, removed the lines (skill likelihood) and changed the markers to diamonds.
+
+### Analysis
+- Python and SQL are by far the most demanded skills in most of the high-paying jobs.
+- Excel is still very relevant. This shows that the foundational skills remain essential not only for entry-level jobs but also for higher-paying ones.
+  
+*Note: The following graph includes the results for all countries.*
+
+<img width="2091" height="1520" alt="2_Project_Analysis_Chart4" src="https://github.com/user-attachments/assets/ca29f5e3-dae1-47c3-a05f-f96038a55737" />
+
+
+## Conclusion 
+This project demonstrates my ability to use Excel’s advanced tools to clean, model and analyze real‑world data through a structured workflow, while also giving me clarity on which skills to develop next in my career.
 
 
